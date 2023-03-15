@@ -38,7 +38,7 @@ function Area({area}) {
         {areaTitle(area)}
       </h3>
       {/**Look at Checkpoint 1 Item 2 for this */}
-      <HostList />
+      {/**<HostList />*/}
     </div>
   );
 }

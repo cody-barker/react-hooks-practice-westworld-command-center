@@ -1,18 +1,17 @@
 import React from "react";
 import { Segment } from "semantic-ui-react";
 import Host from './Host'
+import HostList from './HostList'
 
 function ColdStorage({hosts, setHosts}) {
-
-  const hostComps = hosts.map(host => <Host  key={host.id} host={host} hosts={hosts} setHosts={setHosts}/>)
 
   return (
     <Segment.Group className="HQComps">
       <Segment compact>
-        <h3 className="labels">ColdStorage</h3>
+        <h3 className="labels">Cold Storage</h3>
       </Segment>
       <Segment compact>
-        {hostComps}
+        <HostList hosts={hosts} setHosts={setHosts}/>
       </Segment>
     </Segment.Group>
   );
