@@ -2,6 +2,30 @@ import React from "react";
 import "../stylesheets/Area.css";
 
 function Area({area}) {
+
+  // const name = function() {
+  //   if (area.name === "high_plains") {
+  //     return "High Plains"
+  //   }
+  // }
+
+  const areaTitle = function() {
+    switch(area.name) {
+      case "high_plains":
+        return "High Plains"
+      case "lowlands":
+        return "Lowlands"
+      case "under_construction":
+        return "Under Construction"
+      case "pariah":
+        return "Pariah"
+      case "python_pass":
+        return "Python Pass"
+      case "badlands":
+        return "Badlands"
+    }
+  }
+
   return (
     <div
       className="area"
@@ -10,7 +34,7 @@ function Area({area}) {
       }
     >
       <h3 className="labels">
-        {area.name}
+        {areaTitle(area)}
       </h3>
       {/* See Checkpoint 1 item 2 in the Readme for a clue as to what goes here */}
     </div>
